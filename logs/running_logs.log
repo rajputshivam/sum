@@ -61,3 +61,66 @@ Traceback (most recent call last):
   File "/Users/kumarshivam/opt/anaconda3/envs/venv/lib/python3.9/urllib/request.py", line 1345, in do_open
     raise URLError(err)
 urllib.error.URLError: <urlopen error [Errno 60] Operation timed out>
+[2023-06-03 18:11:55,666: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-06-03 18:11:55,675: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-06-03 18:11:55,683: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-06-03 18:11:55,685: INFO: common: created directory at: artifacts]
+[2023-06-03 18:11:55,685: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-06-03 18:14:26,551: ERROR: main: <urlopen error [Errno 60] Operation timed out>]
+Traceback (most recent call last):
+  File "/Users/kumarshivam/opt/anaconda3/envs/venv/lib/python3.9/urllib/request.py", line 1342, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "/Users/kumarshivam/opt/anaconda3/envs/venv/lib/python3.9/http/client.py", line 1255, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Users/kumarshivam/opt/anaconda3/envs/venv/lib/python3.9/http/client.py", line 1301, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Users/kumarshivam/opt/anaconda3/envs/venv/lib/python3.9/http/client.py", line 1250, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Users/kumarshivam/opt/anaconda3/envs/venv/lib/python3.9/http/client.py", line 1010, in _send_output
+    self.send(msg)
+  File "/Users/kumarshivam/opt/anaconda3/envs/venv/lib/python3.9/http/client.py", line 950, in send
+    self.connect()
+  File "/Users/kumarshivam/opt/anaconda3/envs/venv/lib/python3.9/http/client.py", line 1417, in connect
+    super().connect()
+  File "/Users/kumarshivam/opt/anaconda3/envs/venv/lib/python3.9/http/client.py", line 921, in connect
+    self.sock = self._create_connection(
+  File "/Users/kumarshivam/opt/anaconda3/envs/venv/lib/python3.9/socket.py", line 843, in create_connection
+    raise err
+  File "/Users/kumarshivam/opt/anaconda3/envs/venv/lib/python3.9/socket.py", line 831, in create_connection
+    sock.connect(sa)
+TimeoutError: [Errno 60] Operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/kumarshivam/Downloads/Text-Summarization-NLP-Project-main/main.py", line 13, in <module>
+    data_ingestion.main()
+  File "/Users/kumarshivam/Downloads/Text-Summarization-NLP-Project-main/src/textSummarizer/pipeline/stage_01_data_ingestion.py", line 14, in main
+    data_ingestion.download_file()
+  File "/Users/kumarshivam/Downloads/Text-Summarization-NLP-Project-main/src/textSummarizer/conponents/data_ingestion.py", line 18, in download_file
+    filename, headers = request.urlretrieve(
+  File "/Users/kumarshivam/opt/anaconda3/envs/venv/lib/python3.9/urllib/request.py", line 239, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+  File "/Users/kumarshivam/opt/anaconda3/envs/venv/lib/python3.9/urllib/request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "/Users/kumarshivam/opt/anaconda3/envs/venv/lib/python3.9/urllib/request.py", line 523, in open
+    response = meth(req, response)
+  File "/Users/kumarshivam/opt/anaconda3/envs/venv/lib/python3.9/urllib/request.py", line 632, in http_response
+    response = self.parent.error(
+  File "/Users/kumarshivam/opt/anaconda3/envs/venv/lib/python3.9/urllib/request.py", line 555, in error
+    result = self._call_chain(*args)
+  File "/Users/kumarshivam/opt/anaconda3/envs/venv/lib/python3.9/urllib/request.py", line 494, in _call_chain
+    result = func(*args)
+  File "/Users/kumarshivam/opt/anaconda3/envs/venv/lib/python3.9/urllib/request.py", line 747, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+  File "/Users/kumarshivam/opt/anaconda3/envs/venv/lib/python3.9/urllib/request.py", line 517, in open
+    response = self._open(req, data)
+  File "/Users/kumarshivam/opt/anaconda3/envs/venv/lib/python3.9/urllib/request.py", line 534, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "/Users/kumarshivam/opt/anaconda3/envs/venv/lib/python3.9/urllib/request.py", line 494, in _call_chain
+    result = func(*args)
+  File "/Users/kumarshivam/opt/anaconda3/envs/venv/lib/python3.9/urllib/request.py", line 1385, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+  File "/Users/kumarshivam/opt/anaconda3/envs/venv/lib/python3.9/urllib/request.py", line 1345, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno 60] Operation timed out>
